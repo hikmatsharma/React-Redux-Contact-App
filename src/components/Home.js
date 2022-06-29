@@ -18,7 +18,7 @@ const Home = () => {
             <hr></hr>
             <div>
               {
-                (contactList.length === 0) ? <h4 className="text-center text-primary " >No Contact Available !!!  <Link to="/add" className="text-success fst-italic text-decoration-none">Add New Contact Now</Link></h4> :
+                ( contactList.length === 0 ) ? <h4 className="text-center text-primary " >No Contact Available !!!  <Link to="/add" className="text-success fst-italic text-decoration-none">Add New Contact Now</Link></h4> :
                   <table className="table table-striped">
                     <thead>
                       <tr>
