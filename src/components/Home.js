@@ -17,7 +17,7 @@ const Home = () => {
             <hr></hr>
             <div>
               {
-                (contactList.length === 0) ? <h4 className="text-center text-primary " >No Contact Available !!!  <Link to="/add" className="text-success text-decoration-none">Add New Contact Now</Link></h4> :
+                (contactList.length === 0) ? <h4 className="text-center text-primary " >No Contact Available !!!  <Link to="/add" className="text-success fst-italic text-decoration-none">Add New Contact Now</Link></h4> :
                   <table className="table table-striped">
                     <thead>
                       <tr>
@@ -32,7 +32,7 @@ const Home = () => {
                       {contactList.map((contact, id) => {
                         return (
                           <tr key={id} >
-                            <th scope="row">{contact.id}</th>
+                            <th scope="row">{contact.id+1}</th>
                             <td>{contact.name} </td>
                             <td>{contact.phone} </td>
                             <td>{contact.email}</td>
