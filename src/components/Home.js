@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { deleteContact } from '../features/contactSlice'
 import { useSelector, useDispatch } from 'react-redux'
+import { toast } from "react-toastify";
 const Home = () => {
   const contactList = useSelector((state) => state.AddContact.contact)
   const dispatch = useDispatch()
@@ -37,7 +38,7 @@ const Home = () => {
                             <td>{contact.phone} </td>
                             <td>{contact.email}</td>
                             <td>
-                              <button onClick={() => dispatch(deleteContact(contact.id))} className='btn btn-sm btn-danger' ><i className="bi bi-trash3-fill"></i></button>
+                              <button onClick={() => {dispatch(deleteContact(contact.id)); toast.success("Contact deleted successfully!!") }} className='btn btn-sm btn-danger' ><i className="bi bi-trash3-fill"></i></button>
                             </td>
                             <td>
                               <Link to={`/edit/${contact.id}`} className="btn btn-sm btn-primary"><i className="bi bi-pencil-square"></i></Link>
